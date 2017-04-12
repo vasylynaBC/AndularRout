@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='AngularTest'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AngularTest</title>
+    <link rel="stylesheet" href="src/css/style.css"> 
+    <link rel="stylesheet" href="src/css/styleMain.css">
+    </head>
+
+<body>
+    <div ng-controller="NavigationCtrl as navigation">
+        <label ng-repeat="testQ in navigation.testQ">
+            <div > <a class="blockone" ng-href="{{testQ.link}}">{{testQ.title}}</a> </div>
+        </label>
+    </div>
+    <div class="mainblock">
+        <ng-view></ng-view>
+    </div>
+    </div>
+    </div>
+    <script src="src/libs/angular/angular.min.js"></script>
+    <script src="src/libs/angular/angular-resource.min.js"></script>
+    <script src="src/libs/angular/angular-route.min.js"></script>
+    <script src="app/controllers/nav.controller.js"></script>
+    <script src="app/controllers/controllerf.js"></script>
+    <script src="app/controllers/controllerS.js"></script>
+    <script src="app/controllers/controllerT.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="src/services/UserService.js"></script>
+</body>
+
+</html>
